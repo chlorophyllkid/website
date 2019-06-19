@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='initial-scale=1.0, width=device-width')
+
+    title= title
+
+    block stylesheets
+      link(rel='stylesheet' href='/css/stylesheet.css')
+
+
+  body
+    block page
+      a(href='#main') Skip to main content
+
+      include _includes/header.pug
+
+      main(id='main')
+        h1= title
+        if subtitle
+          p.subtitle
+            != subtitle
+
+        != content
+
+      include _includes/footer.pug
