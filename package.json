@@ -1,0 +1,29 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "author": "Christopher Voigt",
+  "private": true,
+  "keywords": [
+    "eleventy",
+    "website"
+  ],
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
+    "cssnano": "^4.1.10",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "html-minifier": "^4.0.0",
+    "postcss": "^7.0.17",
+    "postcss-color-mix": "^1.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-mixins": "^6.2.1",
+    "precss": "^4.0.0",
+    "pug": "^2.0.4"
+  }
+}
