@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const path = require('path');
 
@@ -17,14 +18,14 @@ module.exports = class stylesheet {
     const rawFilepath = path.join(__dirname, `../_includes/${fileName}`);
 
     return {
-      permalink: `css/${fileName}`,
+      permalink: `assets/${fileName}`,
       rawFilepath,
       rawCss: await fs.readFileSync(rawFilepath),
     };
   }
 
   render({ rawCss, rawFilepath }) {
-    return postcss([precss, postcssImport, postcssMixins, postcssColorMix, cssnano])
+    return postcss([postcssImport, precss, postcssMixins, postcssColorMix, cssnano])
       .process(rawCss, { from: rawFilepath })
       .then(result => result.css);
   }
