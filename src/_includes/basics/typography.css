@@ -1,0 +1,12 @@
+
+:root {
+  font-size: calc(1rem + 0.1vw);
+}
+
+h1 {
+  font-size: calc(2.5rem + 0.1vw);
+
+  padding: 5px;
+  margin: 0 -10px 2rem;
+  border: 5px dashed #4aff00;
+}

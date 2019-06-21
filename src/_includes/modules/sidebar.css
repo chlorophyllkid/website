@@ -1,0 +1,41 @@
+
+.sidebar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+
+  max-width: 80ch;
+  margin: 1em auto;
+
+  &_link + &_link {
+    margin-left: 1rem;
+  }
+
+  &_link {
+    padding: 1rem;
+
+    .icon svg {
+      width: 34px;
+      height: 34px;
+      transition: transform .2s ease-out;
+
+      path {
+        fill: black;
+        transition: fill .2s ease-out;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      .icon svg {
+        transform: scale(1.25);
+
+        path {
+          fill: #4aff00;
+        }
+      }
+    }
+  }
+}

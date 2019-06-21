@@ -7,21 +7,23 @@ html(lang='en')
     title= title
 
     block stylesheets
-      link(rel='stylesheet' href='/css/stylesheet.css')
+      link(rel='stylesheet' href='/assets/stylesheet.css')
 
 
   body
     block page
-      a(href='#main') Skip to main content
-
-      include _includes/header.pug
-
       main(id='main')
-        h1= title
-        if subtitle
-          p.subtitle
-            != subtitle
-
+        h1= headline
         != content
 
-      include _includes/footer.pug
+      nav.sidebar
+        a.sidebar_link(href='https://github.com/chlorophyllkid', title='Github profile', target='_blank', rel="noopener")
+          span.icon.-github
+            include _includes/svg/icon-github.svg
+        a.sidebar_link(href='https://twitter.com/chlorophyllkid', title='Twitter profile', target='_blank', rel="noopener")
+          span.icon.-twitter
+            include _includes/svg/icon-twitter.svg
+
+
+    block scripts
+      script(src='/assets/script.js')
