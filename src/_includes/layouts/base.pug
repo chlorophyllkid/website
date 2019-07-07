@@ -17,12 +17,22 @@ html(lang='en')
         h1= headline
         != content
 
-      nav.sidebar
-        a.sidebar_link(href='https://github.com/chlorophyllkid', title='Github profile', target='_blank', rel="noopener")
-          span.icon.-github
+      footer
+        nav.socialMedia
+          a.socialMedia_link.-github(
+            href='https://github.com/chlorophyllkid',
+            title='follow me on github',
+            target='_blank',
+            rel='noopener'
+          )
             include _includes/svg/icon-github.svg
-        a.sidebar_link(href='https://twitter.com/chlorophyllkid', title='Twitter profile', target='_blank', rel="noopener")
-          span.icon.-twitter
+
+          a.socialMedia_link.-twitter(
+            href='https://twitter.com/chlorophyllkid',
+            title='follow me on twitter',
+            target='_blank',
+            rel='noopener'
+          )
             include _includes/svg/icon-twitter.svg
 
 

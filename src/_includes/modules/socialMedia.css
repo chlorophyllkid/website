@@ -1,20 +1,21 @@
 
-.sidebar {
-  list-style: none;
+.socialMedia {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   max-width: 80ch;
-  margin: 1em auto;
+  margin: 0 auto;
 
   &_link + &_link {
-    margin-left: 1rem;
+    margin-left: .5rem;
   }
 
   &_link {
-    padding: 1rem;
+    padding: .5rem;
+    line-height: 1;
 
-    .icon svg {
+    svg {
       width: 34px;
       height: 34px;
       transition: transform .2s ease-out;
@@ -29,13 +30,10 @@
     &:focus {
       outline: 0;
 
-      .icon svg {
+      svg {
         transform: scale(1.25);
-
-        path {
-          fill: #4aff00;
-        }
       }
     }
   }
+
 }
