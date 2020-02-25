@@ -8,6 +8,8 @@ const postcssImport = require('postcss-import');
 const postcssMixins = require('postcss-mixins');
 const postcssColorMix = require('postcss-color-mix');
 const cssnano = require('cssnano');
+const tailwind = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
 
 // the file name as an entry point for postcss compilation
 // also used to define the output filename in our output /css folder.
@@ -25,8 +27,8 @@ module.exports = class stylesheet {
   }
 
   render({ rawCss, rawFilepath }) {
-    return postcss([postcssImport, precss, postcssMixins, postcssColorMix, cssnano])
-      .process(rawCss, { from: rawFilepath })
-      .then(result => result.css);
+    return postcss(
+      [postcssImport, precss, postcssMixins, postcssColorMix, tailwind, autoprefixer, cssnano],
+    ).process(rawCss, { from: rawFilepath }).then((result) => result.css);
   }
 };
