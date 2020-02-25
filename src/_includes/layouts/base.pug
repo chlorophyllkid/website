@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html.h-full(lang='en')
   head
     meta(charset='utf-8')
     meta(name='viewport' content='initial-scale=1.0, width=device-width')
@@ -11,38 +11,40 @@ html(lang='en')
       link(rel='stylesheet' href='/assets/stylesheet.css')
 
 
-  body
+  body.flex.flex-col.min-h-full.text-black.bg-white(class='sm:justify-center')
     block page
-      main(id='main')
+      main.max-w-text.mx-4(id='main', class='sm:mx-auto')
         h1= headline
         != content
 
-      footer
-        nav.socialMedia
-          a.socialMedia_link.-github(
+      footer.max-w-text.mt-8(class='sm:mx-auto')
+        nav.flex.justify-center
+          a.p-4.text-black(
             href='https://github.com/chlorophyllkid',
             title='follow me on github',
             target='_blank',
-            rel='noopener'
+            rel='noopener',
+            class='hover:text-green'
           )
             include ../svg/icon-github.svg
 
-          a.socialMedia_link.-twitter(
+          a.p-4.ml-8.text-black(
             href='https://twitter.com/chlorophyllkid',
             title='follow me on twitter',
             target='_blank',
-            rel='noopener'
+            rel='noopener',
+            class='hover:text-green'
           )
             include ../svg/icon-twitter.svg
 
-          a.socialMedia_link.-codepen(
+          a.p-4.ml-8.text-black(
             href='https://codepen.io/chlorophyllkid',
             title='follow me on codepen',
             target='_blank',
-            rel='noopener'
+            rel='noopener',
+            class='hover:text-green'
           )
             include ../svg/icon-codepen.svg
-
 
     block scripts
       script(src='/assets/script.js')
