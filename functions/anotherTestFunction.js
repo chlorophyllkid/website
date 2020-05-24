@@ -1,13 +1,13 @@
-import fetch from 'node-fetch';
+import fetch from "node-fetch";
 
-const API_ENDPOINT = 'https://icanhazdadjoke.com/';
+const API_ENDPOINT = "https://icanhazdadjoke.com/";
 
-exports.handler = async () => {
+exports.handler = async (event, context) => {
   return fetch(API_ENDPOINT, { headers: { "Accept": "application/json" } })
-    .then((response) => response.json())
-    .then((data) => ({
+    .then(response => response.json())
+    .then(data => ({
       statusCode: 200,
-      body: data.joke,
+      body: data.joke
     }))
-    .catch((error) => ({ statusCode: 422, body: String(error) }));
+    .catch(error => ({ statusCode: 422, body: String(error) }));
 };
