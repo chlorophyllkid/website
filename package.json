@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "autoprefixer": "^9.7.5",
+    "node-fetch": "^2.6.0",
     "tailwindcss": "^1.2.0"
   }
 }
