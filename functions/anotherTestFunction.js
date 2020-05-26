@@ -6,6 +6,7 @@ exports.handler = async (event, context, callback) => reqwest({
   url: API_ENDPOINT,
   method: 'get',
   type: 'json',
+  headers: { Accept: 'application/json' },
   error: (error) => callback({ statusCode: 422, body: String(error) }),
   success: (response) => callback({ statusCode: 200, body: response.joke }),
 });
