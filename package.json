@@ -17,7 +17,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
-    "axios": "^0.19.2",
+    "bent": "^7.3.1",
     "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
