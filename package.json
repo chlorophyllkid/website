@@ -28,12 +28,14 @@
     "postcss-mixins": "^6.2.3",
     "precss": "^4.0.0",
     "pug": "^2.0.4",
+    "reqwest": "^2.0.5",
     "rollup": "^2.2.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-uglify": "^6.0.4",
-    "uglify-es": "^3.3.9"
+    "uglify-es": "^3.3.9",
+    "xhr2": "^0.2.0"
   },
   "resolutions": {
     "browserslist": "4.6.2",
@@ -41,8 +43,6 @@
   },
   "dependencies": {
     "autoprefixer": "^9.7.5",
-    "reqwest": "^2.0.5",
-    "tailwindcss": "^1.2.0",
-    "xhr2": "^0.2.0"
+    "tailwindcss": "^1.2.0"
   }
 }
