@@ -42,6 +42,7 @@
   "dependencies": {
     "autoprefixer": "^9.7.5",
     "reqwest": "^2.0.5",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.2.0",
+    "xhr2": "^0.2.0"
   }
 }
