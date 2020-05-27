@@ -5,7 +5,7 @@ const API_ENDPOINT = 'https://newsapi.org/v2/top-headlines?country=de&apiKey=96e
 
 exports.handler = async (event, context, callback) => {
 
-  return axios.get({ url: API_ENDPOINT, headers: { Accept: 'application/json' } })
+  return axios.get(API_ENDPOINT)
     .then((response) => {
       console.log(response);
 
