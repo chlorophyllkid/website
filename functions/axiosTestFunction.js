@@ -10,7 +10,7 @@ exports.handler = async (event, context, callback) => {
 
       return callback(null, {
         statusCode: 200,
-        body: JSON.stringify(response),
+        body: response.data,
       });
     })
     .catch((error) => callback(null, { statusCode: 422, body: String(error) }));
