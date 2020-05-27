@@ -6,10 +6,9 @@ const API_ENDPOINT = 'https://newsapi.org/v2/top-headlines?country=de&apiKey=96e
 exports.handler = async (event, context, callback) => {
 
   return axios.get(API_ENDPOINT)
-    .then((response) => response.json())
-    .then((data) => callback(null, {
+    .then((response) => callback(null, {
       statusCode: 200,
-      body: data,
+      body: response,
     }))
     .catch((error) => callback(null, { statusCode: 422, body: String(error) }));
 };
