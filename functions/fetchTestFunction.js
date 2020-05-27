@@ -5,7 +5,7 @@ const API_ENDPOINT = 'https://newsapi.org/v2/top-headlines?country=de&apiKey=96e
 
 exports.handler = async (event, context, callback) => {
 
-  fetch(API_ENDPOINT)
+  return fetch(API_ENDPOINT)
     .then((response) => response.json())
     .then((data) => callback(null, {
       statusCode: 200,
