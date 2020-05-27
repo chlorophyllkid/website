@@ -8,7 +8,8 @@ exports.handler = async (event, context, callback) => {
     .then((res) => {
       callback(null, {
         statusCode: 200,
-        body: res.data,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(res.data),
       });
     })
     .catch((err) => {
