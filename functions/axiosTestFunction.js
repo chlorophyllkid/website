@@ -7,12 +7,11 @@ exports.handler = async (event, context, callback) => {
 
   return axios.get(API_ENDPOINT)
     .then((response) => {
-      console.log(response);
 
       return callback(null, {
         statusCode: 200,
         body: response,
       });
     })
-    .catch((error) => callback(null, { statusCode: 422, body: error }));
+    .catch((error) => callback(null, { statusCode: 422, body: String(error) }));
 };

@@ -10,6 +10,6 @@ exports.handler = async (event, context, callback) => {
     const response = await getJSON(API_ENDPOINT);
     callback(null, { statusCode: 200, body: response });
   } catch (error) {
-    callback(null, { statusCode: 422, body: error });
+    callback(null, { statusCode: 422, body: String(error) });
   }
 };
