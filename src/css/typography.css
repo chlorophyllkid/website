@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Frutiger';
+  src: url('../fonts/Frutiger LT 45 Light.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frutiger';
+  src: url('../fonts/Frutiger LT 55 Roman.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frutiger';
+  src: url('../fonts/Frutiger LT 65 Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+.hyphens {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}

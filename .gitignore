@@ -29,15 +29,14 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
+# Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
-dist
 
 # Dependency directories
 node_modules/
 jspm_packages/
 
-# TypeScript v1 declaration files
+# Typescript v1 declaration files
 typings/
 
 # Optional npm cache directory
@@ -46,23 +45,33 @@ typings/
 # Optional eslint cache
 .eslintcache
 
-# MacOS folder files
-.DS_Store
-
 # Optional REPL history
 .node_repl_history
 
 # Output of 'npm pack'
 *.tgz
 
+# dotenv environment variable files
+environment/gatsby.env
+
+# gatsby files
+.cache/
+public
+
+# storybook files
+storybook-static
+
+# Mac files
+.DS_Store
+
+# Yarn
+yarn-error.log
+.pnp/
+.pnp.js
+
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-
-# next.js build output
-.next
-
 # IDE
 .vscode
+.idea

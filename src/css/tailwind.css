@@ -1,0 +1,20 @@
+/* start custom styles */
+@import './resets.css';
+@import './typography.css';
+
+html {
+  @apply h-full;
+}
+
+body {
+  @apply h-screen;
+  @apply font-frutiger text-303030 bg-edefef;
+}
+/* end custom styles */
+
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
