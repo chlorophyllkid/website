@@ -17,7 +17,7 @@ module.exports = {
     },
 
     fontFamily: {
-      frutiger: ['Frutiger', 'Arial', 'Helvetica', 'sans-serif'],
+      frutiger: ['Roboto', 'Arial', 'Helvetica', 'sans-serif'],
     },
 
     fontWeight: {
