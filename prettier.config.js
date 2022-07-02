@@ -4,4 +4,6 @@ module.exports = {
   semi: false,
   singleQuote: true,
   useTabs: false,
+  quoteProps: 'consistent',
+  printWidth: 120,
 }
