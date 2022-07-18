@@ -1,5 +1,6 @@
 ---
 layout: layouts/home.njk
+permalink: /
 eleventyNavigation:
   key: Home
   order: 1
@@ -13,6 +14,6 @@ eleventyNavigation:
 </h1>
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+{% include "partials/postslist.njk" %}
 <p>More posts can be found in
   <a href="{{ '/posts/' | url }}">the archive</a>.</p>
