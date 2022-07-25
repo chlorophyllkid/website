@@ -9,9 +9,8 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginNavigation = require('@11ty/eleventy-navigation')
 
 module.exports = function (eleventyConfig) {
-  // Copy the `img` and `css` folders to the output
+  // Copy the `img` folder to the output
   eleventyConfig.addPassthroughCopy('src/img')
-  eleventyConfig.addPassthroughCopy('src/css')
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss)
@@ -79,7 +78,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function (err, browserSync) {
-        const content_404 = fs.readFileSync('_site/404.html')
+        const content_404 = fs.readFileSync('dist/404.html')
 
         browserSync.addMiddleware('*', (req, res) => {
           // Provides the 404 content without redirect.

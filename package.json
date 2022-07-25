@@ -8,7 +8,9 @@
     "url": "https://github.com/chlorophyllkid/website"
   },
   "scripts": {
-    "build": "npx @11ty/eleventy",
+    "build": "npm run build:11ty && npm run build:postcss",
+    "build:11ty": "npx @11ty/eleventy",
+    "build:postcss": "postcss src/css/*.css -o dist/css/index.css",
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "watch": "npx @11ty/eleventy --watch",
     "serve": "npx @11ty/eleventy --serve",
@@ -20,8 +22,15 @@
     "@11ty/eleventy-navigation": "^0.3.3",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.12",
     "luxon": "^2.4.0",
     "markdown-it": "^13.0.1",
-    "markdown-it-anchor": "^8.6.4"
+    "markdown-it-anchor": "^8.6.4",
+    "open-props": "^1.4.4",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^14.1.0",
+    "postcss-jit-props": "^1.0.7"
   }
 }
