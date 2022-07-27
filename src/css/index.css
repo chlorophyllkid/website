@@ -3,7 +3,6 @@
 @import './partials/_global.css';
 
 /* partials */
-@import './partials/direct-link.css';
 @import './partials/header.css';
 @import './partials/infobox.css';
 @import './partials/postlist.css';
