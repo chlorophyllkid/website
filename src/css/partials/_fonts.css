@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/ubuntu-v20-latin-regular.woff2') format('woff2'),
+    url('../fonts/ubuntu-v20-latin-regular.woff') format('woff'),
+    url('../fonts/ubuntu-v20-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/ubuntu-v20-latin-700.woff2') format('woff2'),
+    url('../fonts/ubuntu-v20-latin-700.woff') format('woff'),
+    url('../fonts/ubuntu-v20-latin-700.ttf') format('truetype');
+}
+
+:root {
+  --font-family: Ubuntu, -apple-system, system-ui, sans-serif;
+  --font-family-monospace: Fira Code, Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+    Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
+    Courier, monospace;
+}

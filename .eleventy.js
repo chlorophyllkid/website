@@ -11,6 +11,7 @@ const pluginNavigation = require('@11ty/eleventy-navigation')
 module.exports = function (eleventyConfig) {
   // Copy the `img` folder to the output
   eleventyConfig.addPassthroughCopy('src/img')
+  eleventyConfig.addPassthroughCopy('src/fonts')
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss)
