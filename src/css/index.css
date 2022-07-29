@@ -4,6 +4,5 @@
 
 /* partials */
 @import './partials/header.css';
-@import './partials/infobox.css';
 @import './partials/postlist.css';
 @import './partials/tags.css';

@@ -19,7 +19,7 @@
 .postlist-date,
 .postlist-item:before {
   font-size: 0.8125em; /* 13px /16 */
-  color: var(--color-gray-90);
+  color: var(--text-color);
 }
 .postlist-date {
   word-spacing: -0.5px;
