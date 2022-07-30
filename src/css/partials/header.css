@@ -1,29 +1,93 @@
 /* Header */
-.home {
-  padding: 0 1rem;
-  float: left;
-  margin: 1rem 0; /* 16px /16 */
-  font-size: 1em; /* 16px /16 */
-  font-weight: bold;
-}
-.home :link:not(:hover) {
-  text-decoration: none;
+header {
+  padding-top: 24px;
 }
 
-/* Nav */
+.logo {
+  grid-column: 1 / span 5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @media (min-width: 600px) {
+    grid-column: 1 / span 6;
+    gap: 12px;
+  }
+
+  @media (min-width: 1000px) {
+    grid-column: 1 / span 8;
+    gap: 16px;
+  }
+
+  &:focus {
+    outline: none;
+
+    & .title {
+      outline-color: var(--text-color-link);
+    }
+  }
+
+  & .icon {
+    --size: 30px;
+
+    display: block;
+    position: relative;
+    width: var(--size);
+    height: calc(var(--size) * 2 / 3);
+    background: var(--primary-color-gradient);
+    border-radius: calc(var(--size) / 10);
+
+    &::after {
+      content: '';
+      display: block;
+      width: inherit;
+      height: inherit;
+      background: inherit;
+      border-radius: inherit;
+      transform: rotate(60deg);
+
+      position: absolute;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: inherit;
+      height: inherit;
+      background: inherit;
+      border-radius: inherit;
+      transform: rotate(-60deg);
+
+      position: absolute;
+    }
+
+    @media (min-width: 600px) {
+      --size: 40px;
+    }
+
+    @media (min-width: 1000px) {
+      --size: 50px;
+    }
+  }
+
+  & .title {
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: bold;
+    color: var(--text-color);
+    outline: 1px solid transparent;
+
+    @media (min-width: 600px) {
+      font-size: 1.25rem;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* ToDo: */
 .nav {
-  padding: 0;
-  list-style: none;
-  float: left;
-  margin-left: 1em;
-}
-.nav-item {
-  display: inline-block;
-  margin-right: 1em;
-}
-.nav-item a[href]:not(:hover) {
-  text-decoration: none;
-}
-.nav-item-active {
-  font-weight: 700;
+  display: none;
 }

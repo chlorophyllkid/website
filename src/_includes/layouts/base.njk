@@ -13,10 +13,11 @@
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
   <body>
-    <header>
-      <div class="home">
-        <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-      </div>
+    <header class="base-grid">
+      <a class="logo" href="{{ '/' | url }}">
+        <span class="icon"></span>
+        <span class="title">{{ metadata.title }}</span>
+      </a>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="nav">
@@ -28,7 +29,7 @@
       </ul>
     </header>
 
-    <main {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+    <main class="base-grid">
       {{ content | safe }}
     </main>
 

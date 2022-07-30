@@ -3,6 +3,10 @@
 @import './partials/_theme.css';
 @import './partials/_global.css';
 
+/* layouts */
+@import './layouts/base.css';
+@import './layouts/post.css';
+
 /* partials */
 @import './partials/header.css';
 @import './partials/postlist.css';

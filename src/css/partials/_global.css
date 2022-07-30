@@ -1,60 +1,84 @@
-* {
-  box-sizing: border-box;
-}
-
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: var(--font-family);
   color: var(--text-color);
   background-color: var(--background-color);
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
-p,
-.tmpl-post li,
-img {
-  max-width: 37.5em; /* 600px /16 */
-}
-p,
-.tmpl-post li {
-  line-height: 1.45;
+header ~ main {
+  margin-top: 172px;
+
+  @media (min-width: 1280px) {
+    margin-top: 200px;
+  }
 }
 
 a[href] {
   color: var(--text-color-link);
+  text-decoration: underline;
+  outline: 1px solid var(--text-color-link);
 }
 
-main {
-  padding: 1rem;
-}
-main :first-child {
-  margin-top: 0;
-}
-header {
-  border-bottom: 1px dashed var(--primary-color-light);
-}
-header:after {
-  content: '';
-  display: table;
-  clear: both;
+:link:not(:hover) {
+  text-decoration: none;
 }
 
-table {
-  margin: 1em 0;
+:link:not(:focus) {
+  outline-color: transparent;
 }
-table td,
-table th {
-  padding-right: 1em;
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  line-height: 1.11111;
+
+  @media (min-width: 600px) {
+    font-size: 3.375rem;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 4.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.25;
+
+  @media (min-width: 600px) {
+    font-size: 1.75rem;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.25;
+
+  @media (min-width: 600px) {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 1.5rem;
+  }
 }
 
 pre,
 code {
   font-family: var(--font-family-monospace);
   line-height: 1.5;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 }
 pre {
   font-size: 14px;
