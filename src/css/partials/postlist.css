@@ -13,10 +13,6 @@
   & .post-tag {
     margin-left: 0.5rem;
   }
-  & .post-tag + .post-tag {
-    margin-left: 0.5rem;
-    margin-top: 0;
-  }
 }
 .postlist-item:before {
   display: inline-block;

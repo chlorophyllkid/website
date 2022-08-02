@@ -1,15 +1,9 @@
 .post-tag {
   text-transform: uppercase;
-
-  @media (min-width: 600px) {
-    display: block;
-  }
-}
-
-.post-tag + .post-tag {
   margin-left: 1rem;
 
   @media (min-width: 600px) {
+    display: block;
     margin-left: 0;
     margin-top: 1rem;
   }
