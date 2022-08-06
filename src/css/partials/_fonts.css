@@ -23,4 +23,8 @@
   --font-family-monospace: Fira Code, Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
     Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
     Courier, monospace;
+
+  --font-size-h1: clamp(2.25rem, 1.3696rem + 3.913vw, 4.5rem);
+  --font-size-h2: clamp(1.25rem, 0.8587rem + 1.7391vw, 2.25rem);
+  --font-size-h3: clamp(1rem, 0.8043rem + 0.8696vw, 1.5rem);
 }
