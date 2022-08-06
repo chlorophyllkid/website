@@ -5,7 +5,7 @@ layout: layouts/base.njk
 <h1>{{ title }}</h1>
 
 <div class="post-published">
-  <p>Published on: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
+  <p>Published: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
 </div>
 
 <div class="post-tags">
