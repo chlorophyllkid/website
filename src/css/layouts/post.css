@@ -79,13 +79,43 @@ h1,
   & p + ol,
   & pre + p,
   & p + pre,
-  & h2 + p,
-  & h3 + p {
+  & .markdownItHeadlineWrapper + p {
     margin-top: 2rem;
   }
 
-  & p + h2,
-  & p + h3 {
+  & p + .markdownItHeadlineWrapper {
     margin-top: 4rem;
+  }
+
+  & .markdownItHeadlineWrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    & a {
+      order: 0;
+      margin-right: 1ch;
+
+      @media (min-width: 1000px) {
+        position: absolute;
+        bottom: 0;
+        right: calc(100% + 1ch);
+        margin-right: 0;
+      }
+    }
+
+    & h2,
+    & h3 {
+      order: 1;
+    }
+
+    & h2 + a {
+      font-size: var(--font-size-h2);
+    }
+
+    & h3 + a {
+      font-size: var(--font-size-h3);
+    }
   }
 }

@@ -65,7 +65,11 @@ module.exports = function (eleventyConfig) {
     html: true,
     linkify: true,
   }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.headerLink(),
+    permalink: markdownItAnchor.permalink.linkAfterHeader({
+      style: 'aria-label',
+      assistiveText: (title) => `Permalink to “${title}”`,
+      wrapper: ['<div class="markdownItHeadlineWrapper">', '</div>'],
+    }),
     level: [1, 2, 3, 4],
     slugify: eleventyConfig.getFilter('slugify'),
   })
