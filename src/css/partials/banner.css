@@ -39,15 +39,22 @@
 }
 
 svg {
+  --imageWidth: 500px;
+
   display: block;
+  justify-self: center;
   height: calc(var(--size) * 6 / 5);
   width: var(--size);
   filter: drop-shadow(0 0 8px var(--black));
+  margin-top: calc(-1 * var(--size) * 6 / 5 - 1rem);
 
-  --imageWidth: 500px;
+  @media (min-width: 600px) {
+    margin-top: calc(-1 * var(--size) * 6 / 5 - 1.5rem);
+  }
 
-  margin-top: calc(var(--size) * -6.5 / 5);
-  justify-self: center;
+  @media (min-width: 1280px) {
+    margin-top: calc(-1 * var(--size) * 6 / 5 - 2rem);
+  }
 }
 
 #mask01,
