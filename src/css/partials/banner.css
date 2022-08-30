@@ -1,0 +1,68 @@
+:root {
+  --size: clamp(4rem, 33vw, 24rem);
+}
+
+.banner {
+  margin-top: calc(var(--size) * 1 / 5);
+  margin-bottom: calc(var(--size) * 1 / 5);
+
+  position: relative;
+  height: calc(var(--size) * 4 / 5);
+  background: var(--banner-gradient);
+  background-size: 300% 100%;
+  -webkit-animation: gradient 8s ease infinite;
+  animation: gradient 8s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+svg {
+  display: block;
+  height: calc(var(--size) * 6 / 5);
+  width: var(--size);
+  filter: drop-shadow(0 0 8px var(--black));
+
+  --imageWidth: 500px;
+
+  margin-top: calc(var(--size) * -6.5 / 5);
+  justify-self: center;
+}
+
+#mask01,
+#mask02,
+#mask03 {
+  transform-origin: center;
+  width: var(--imageWidth);
+  height: calc(var(--imageWidth) * 2 / 3);
+  transform: translateY(calc(-1 / 2 * var(--imageWidth) * 2 / 3));
+}
+
+#mask02 {
+  transform: rotate(60deg) translateY(calc(-1 / 2 * var(--imageWidth) * 2 / 3));
+}
+
+#mask03 {
+  transform: rotate(-60deg) translateY(calc(-1 / 2 * var(--imageWidth) * 2 / 3));
+}

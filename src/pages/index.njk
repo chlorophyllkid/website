@@ -3,6 +3,17 @@ layout: layouts/home.njk
 permalink: /
 ---
 
+<div class="banner full-width"></div>
+
+<svg class="right-main" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+  <mask id="svgMask">
+    <rect id="mask01" y="50%" rx="55" ry="55" fill="#fff"/>
+    <rect id="mask02" y="50%" rx="55" ry="55" fill="#fff"/>
+    <rect id="mask03" y="50%" rx="55" ry="55" fill="#fff"/>
+  </mask>
+  <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ '/img/me.webp' | url }}" mask="url(#svgMask)" />
+</svg>
+
 {% set maxPosts = collections.posts.length | min(3) %}
 <h1>Latest
   {% if maxPosts == 1 %}Post
@@ -14,4 +25,4 @@ permalink: /
 {% set postslistCounter = collections.posts | length %}
 {% include "partials/postslist.njk" %}
 
-<p style="grid-column: 1 / -1;">More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>

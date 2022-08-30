@@ -8,6 +8,7 @@
 @import './layouts/post.css';
 
 /* partials */
+@import './partials/banner.css';
 @import './partials/header.css';
 @import './partials/postlist.css';
 @import './partials/tags.css';

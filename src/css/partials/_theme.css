@@ -12,6 +12,9 @@
   /* gradients */
   --magenta-gradient: linear-gradient(to bottom right, var(--magenta-light), var(--magenta));
   --green-gradient: linear-gradient(to bottom right, var(--green), var(--green-dark));
+
+  --magenta-banner-gradient: linear-gradient(135deg, var(--magenta) 0%, var(--magenta-light) 50%, var(--magenta) 100%);
+  --green-banner-gradient: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 50%, var(--green-dark) 100%);
 }
 
 /* light theme */
@@ -22,6 +25,8 @@
 
   --primary-color: var(--magenta);
   --primary-color-gradient: var(--magenta-gradient);
+
+  --banner-gradient: var(--magenta-banner-gradient);
 }
 
 /* dark theme */
@@ -33,5 +38,7 @@
 
     --primary-color: var(--green);
     --primary-color-gradient: var(--green-gradient);
+
+    --banner-gradient: var(--green-banner-gradient);
   }
 }
