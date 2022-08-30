@@ -1,16 +1,3 @@
-.post-published,
-.post-tags {
-  grid-column: 6 / span 1;
-
-  @media (min-width: 600px) {
-    grid-column: 7 / span 2;
-  }
-
-  @media (min-width: 1000px) {
-    grid-column: 9 / span 2;
-  }
-}
-
 .post-published {
   place-self: end start;
   position: relative;
@@ -49,20 +36,6 @@
       transform-origin: top left;
       white-space: nowrap;
     }
-  }
-}
-
-h1,
-/* .post-other, */
-.post-content {
-  grid-column: 1 / span 5;
-
-  @media (min-width: 600px) {
-    grid-column: 1 / span 6;
-  }
-
-  @media (min-width: 1000px) {
-    grid-column: 1 / span 8;
   }
 }
 

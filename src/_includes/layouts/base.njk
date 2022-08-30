@@ -13,23 +13,23 @@
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
   <body>
-    <header class="base-grid">
+    <header class="new-grid">
       <a class="logo" href="{{ '/' | url }}">
         <span class="icon"></span>
         <span class="title">{{ metadata.title }}</span>
       </a>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav">
+      {# <ul class="nav">
         {%- for entry in collections.all | eleventyNavigation %}
           <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
             <a href="{{ entry.url | url }}">{{ entry.title }}</a>
           </li>
         {%- endfor %}
-      </ul>
+      </ul> #}
     </header>
 
-    <main class="base-grid">
+    <main class="new-grid">
       {{ content | safe }}
     </main>
 
