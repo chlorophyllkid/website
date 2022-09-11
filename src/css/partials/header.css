@@ -1,6 +1,9 @@
 /* Header */
 header {
   padding-top: 24px;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
@@ -28,6 +31,7 @@ header {
   & .icon {
     --size: 30px;
 
+    flex-shrink: 0;
     display: block;
     position: relative;
     width: var(--size);
