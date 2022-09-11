@@ -7,10 +7,11 @@ export default css`
 
   button {
     background: transparent;
-    border: 0;
     color: inherit;
+    border: 0;
     width: 2.5rem;
     height: 2.5rem;
+    padding: 0.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,6 +26,6 @@ export default css`
   }
 
   button > svg {
-    width: 100%;
+    width: 2rem;
   }
 `
