@@ -20,6 +20,7 @@ header {
     outline: none;
 
     & .title {
+      outline-offset: 4px;
       outline-color: var(--text-color-link);
     }
   }

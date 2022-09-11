@@ -38,7 +38,7 @@
   }
 }
 
-svg {
+svg.portrait {
   --imageWidth: 500px;
 
   display: block;
