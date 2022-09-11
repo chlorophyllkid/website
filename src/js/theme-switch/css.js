@@ -23,4 +23,8 @@ export default css`
   button:focus {
     outline: 1px solid var(--primary-color);
   }
+
+  button > svg {
+    width: 100%;
+  }
 `
