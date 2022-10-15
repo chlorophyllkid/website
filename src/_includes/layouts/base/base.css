@@ -29,12 +29,12 @@
 .new-grid {
   display: grid;
   grid-template-columns:
-    [full-start] minmax(1rem, 1fr)
+    [full-start] minmax(0rem, 1fr)
     [inner-start left-main-start] minmax(0, 5fr) [left-main-end]
-    minmax(1rem, 1fr)
+    minmax(0rem, 1fr)
     [right-main-start] minmax(0, 5fr) [right-main-end inner-end]
-    minmax(1rem, 1fr) [full-end];
-  gap: clamp(1rem, calc(0rem + 200vw), 2rem);
+    minmax(0rem, 1fr) [full-end];
+  gap: clamp(0.5rem, calc(0.5rem + 1vw), 2rem);
 
   &.no-gap {
     gap: 0;
