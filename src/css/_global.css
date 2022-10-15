@@ -5,11 +5,6 @@ body {
   background-color: var(--background-color);
 }
 
-header ~ main,
-main ~ footer {
-  margin-top: 160px;
-}
-
 a[href] {
   color: var(--text-color-link);
   text-decoration: underline;
@@ -75,4 +70,8 @@ pre {
 }
 code {
   word-break: break-all;
+}
+
+table th {
+  text-align: left;
 }

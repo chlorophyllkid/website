@@ -1,11 +1,15 @@
 ---
 layout: layouts/base/base.njk
 permalink: /posts/
+title: Archive
 eleventyNavigation:
   key: Posts
   order: 1
 ---
 
+<div class="spacer -xl"></div>
+
 <h1>Archive</h1>
-{% set postslist = collections.posts %}
-{% include "partials/postlist/postslist.njk" %}
+
+{% set postlist = collections.posts %}
+{% include "partials/postlist/postlist.njk" %}
