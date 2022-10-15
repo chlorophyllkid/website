@@ -9,15 +9,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-
-  @media (min-width: 600px) {
-    gap: 12px;
-  }
-
-  @media (min-width: 1000px) {
-    gap: 16px;
-  }
+  gap: clamp(0.5rem, calc(0rem + 100vw), 1rem);
 
   &:focus {
     outline: none;
@@ -29,7 +21,7 @@ header {
   }
 
   & .icon {
-    --size: 30px;
+    --size: calc(var(--font-size-h3) * 2);
 
     flex-shrink: 0;
     display: block;
@@ -62,30 +54,14 @@ header {
 
       position: absolute;
     }
-
-    @media (min-width: 600px) {
-      --size: 40px;
-    }
-
-    @media (min-width: 1000px) {
-      --size: 50px;
-    }
   }
 
   & .title {
-    font-size: 1rem;
+    font-size: var(--font-size-h3);
     line-height: 1.25;
     font-weight: bold;
     color: var(--text-color);
     outline: 1px solid transparent;
-
-    @media (min-width: 600px) {
-      font-size: 1.25rem;
-    }
-
-    @media (min-width: 1000px) {
-      font-size: 1.5rem;
-    }
   }
 }
 

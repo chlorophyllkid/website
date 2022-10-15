@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: layouts/post/post.njk
 permalink: /about/
 title: About Me
 templateClass: tmpl-post

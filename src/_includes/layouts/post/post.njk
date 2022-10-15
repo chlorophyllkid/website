@@ -1,20 +1,22 @@
 ---
-layout: layouts/base.njk
+layout: layouts/base/base.njk
 ---
 
 <h1>{{ title }}</h1>
 
-<div class="post-published">
-  <p>Published: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
-</div>
+<div class="post-header">
+  <div class="post-published">
+    <p>Published: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
+  </div>
 
-<div class="post-tags">
-  <div class="post-tag-wrapper">
-    Tags:
-    {%- for tag in tags | filterTagList %}
-      {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-    {%- endfor %}
+  <div class="post-tags">
+    <div class="post-tag-wrapper">
+      Tags:
+      {%- for tag in tags | filterTagList %}
+        {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+      {%- endfor %}
+    </div>
   </div>
 </div>
 

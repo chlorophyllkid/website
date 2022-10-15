@@ -5,13 +5,10 @@ body {
   background-color: var(--background-color);
 }
 
-/* header ~ main {
-  margin-top: 172px;
-
-  @media (min-width: 1280px) {
-    margin-top: 200px;
-  }
-} */
+header ~ main,
+main ~ footer {
+  margin-top: 160px;
+}
 
 a[href] {
   color: var(--text-color-link);

@@ -5,7 +5,7 @@ date: 2018-08-24
 tags:
   - second tag
   - posts with two tags
-layout: layouts/post.njk
+layout: layouts/post/post.njk
 permalink: /posts/thirdpost/
 ---
 

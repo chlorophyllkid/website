@@ -4,7 +4,7 @@ description: This is a post on My Blog about leveraging agile frameworks.
 date: 2018-07-04
 tags:
   - number 2
-layout: layouts/post.njk
+layout: layouts/post/post.njk
 permalink: /posts/secondpost/
 ---
 

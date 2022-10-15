@@ -47,7 +47,7 @@
   & > * {
     grid-column: inner;
 
-    @media (min-width: 1000px) {
+    @media (min-width: 1280px) {
       grid-column: left-main;
     }
   }
