@@ -34,14 +34,10 @@
     minmax(1rem, 1fr)
     [right-main-start] minmax(0, 5fr) [right-main-end inner-end]
     minmax(1rem, 1fr) [full-end];
-  gap: 1rem 0;
+  gap: clamp(1rem, calc(0rem + 200vw), 2rem);
 
-  @media (min-width: 600px) {
-    gap: 1.5rem 0;
-  }
-
-  @media (min-width: 1280px) {
-    gap: 2rem 0;
+  &.no-gap {
+    gap: 0;
   }
 
   & > * {

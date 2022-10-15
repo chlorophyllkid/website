@@ -2,7 +2,7 @@
   --size: clamp(4rem, 33vw, 24rem);
 }
 
-.banner {
+.banner-background {
   margin-top: calc(var(--size) * 1 / 5);
   margin-bottom: calc(var(--size) * 1 / 5);
 
@@ -12,6 +12,11 @@
   background-size: 300% 100%;
   -webkit-animation: gradient 8s ease infinite;
   animation: gradient 8s ease infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    -webkit-animation: none;
+    animation: none;
+  }
 }
 
 @-webkit-keyframes gradient {
@@ -46,15 +51,7 @@ svg.portrait {
   height: calc(var(--size) * 6 / 5);
   width: var(--size);
   filter: drop-shadow(0 0 8px var(--black));
-  margin-top: calc(-1 * var(--size) * 6 / 5 - 1rem);
-
-  @media (min-width: 600px) {
-    margin-top: calc(-1 * var(--size) * 6 / 5 - 1.5rem);
-  }
-
-  @media (min-width: 1280px) {
-    margin-top: calc(-1 * var(--size) * 6 / 5 - 2rem);
-  }
+  margin-top: calc(-1 * var(--size) * 6 / 5);
 }
 
 #mask01,

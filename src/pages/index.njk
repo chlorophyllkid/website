@@ -3,26 +3,22 @@ layout: layouts/base/base.njk
 permalink: /
 ---
 
-<div class="banner full-width"></div>
+{% include "partials/banner/banner.njk" %}
 
-<svg class="right-main portrait" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
-  <mask id="svgMask">
-    <rect id="mask01" y="50%" rx="55" ry="55" fill="#fff"/>
-    <rect id="mask02" y="50%" rx="55" ry="55" fill="#fff"/>
-    <rect id="mask03" y="50%" rx="55" ry="55" fill="#fff"/>
-  </mask>
-  <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ '/img/me.webp' | url }}" mask="url(#svgMask)" />
-</svg>
+<h1>Hi, I'm Chris</h1>
+<p>I'm currently working as a Senior Frontend Developer at <a href="https://www.queo.de/">queo</a>.</p>
 
 {% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest
-  {% if maxPosts == 1 %}Post
+<h2>Here are
+  {% if maxPosts == 1 %} example Post
   {% else %}
-    {{ maxPosts }} Posts{% endif %}
-</h1>
+    {{ maxPosts }} example Posts{% endif %}
+</h2>
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "partials/postlist/postslist.njk" %}
+<p>I might update those for real posts later. For now they work as a placeholder to style a bunch of stuff.</p>
+
+{% set postlist = collections.posts | head(-3) %}
+{% set postlistCounter = collections.posts | length %}
+{% include "partials/postlist/postlist.njk" %}
 
 <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
