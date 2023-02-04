@@ -6,6 +6,7 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
+    <link rel="canonical" href="https://christophervoigt.dev{{ page.url }}" />
     <script type="module" src="{{ '/js/theme-switch.js' | url }}"></script>
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="preload" href="{{ '/fonts/ubuntu-v20-latin-regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
