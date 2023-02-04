@@ -12,6 +12,12 @@
     <link rel="preload" href="{{ '/fonts/ubuntu-v20-latin-700.woff2' | url }}" as="font" type="font/woff2" crossorigin>
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    <script>
+      const theme = localStorage.getItem('theme');
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme)
+      }
+    </script>
   </head>
   <body>
     <header class="new-grid">

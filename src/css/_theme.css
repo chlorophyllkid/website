@@ -39,7 +39,7 @@
   }
 }
 
-body[data-theme='light'] {
+html[data-theme='light'] {
   --background-color: var(--white);
   --text-color: var(--black);
   --text-color-link: var(--magenta);
@@ -50,7 +50,7 @@ body[data-theme='light'] {
   --banner-gradient: var(--magenta-banner-gradient);
 }
 
-body[data-theme='dark'] {
+html[data-theme='dark'] {
   --background-color: var(--gray);
   --text-color: var(--white);
   --text-color-link: var(--green);

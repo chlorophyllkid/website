@@ -18,13 +18,9 @@ class ThemeSwitch extends LitElement {
     const theme = localStorage.getItem('theme')
 
     if (theme) {
-      document.body.setAttribute('data-theme', theme)
-
-      if (theme === 'dark') {
-        this.isDarkMode = true
-      } else {
-        this.isLightMode = true
-      }
+      this.isDarkMode = theme === 'dark'
+      this.isLightMode = theme !== 'dark'
+      this.isNoPreference = false
     } else {
       this.isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
       this.isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
@@ -33,7 +29,7 @@ class ThemeSwitch extends LitElement {
   }
 
   onClick(theme) {
-    document.body.setAttribute('data-theme', theme)
+    document.documentElement.setAttribute('data-theme', theme)
     localStorage.setItem('theme', theme)
 
     this.isNoPreference = false
