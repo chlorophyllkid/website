@@ -1,0 +1,5 @@
+/* Footer */
+footer {
+  --size: clamp(4rem, 33vw, 24rem);
+  margin-top: calc(var(--size) * 1 / 5);
+}
