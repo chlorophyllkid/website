@@ -1,40 +1,20 @@
-.base-grid {
+.layout-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr) 1.125rem;
-  grid-auto-flow: dense;
-  gap: 16px;
-  margin-left: 16px;
-  margin-right: 16px;
-
-  @media (min-width: 48rem) {
-    grid-template-columns: repeat(8, 1fr);
-    gap: 24px;
-    margin-left: 24px;
-    margin-right: 24px;
-  }
+  gap: clamp(4rem, calc(4rem + 1vw), 6rem) /* Y */ clamp(0.5rem, calc(0.5rem + 1vw), 2rem); /* x */
+  grid-template-columns:
+    [full-start] minmax(0rem, 1fr) [inner-start left-main-start right-main-start]
+    minmax(0rem, 6fr)
+    [right-main-end left-main-end inner-end] minmax(0rem, 1fr) [full-end];
 
   @media (min-width: 64rem) {
-    grid-template-columns: repeat(10, 64px);
-    margin-left: auto;
-    margin-right: auto;
-    width: 856px;
+    gap: clamp(0.5rem, calc(0.5rem + 1vw), 2rem);
+    grid-template-columns:
+      [full-start] minmax(0rem, 1fr)
+      [inner-start left-main-start] minmax(0, 5fr) [left-main-end]
+      minmax(0rem, 1fr)
+      [right-main-start] minmax(0, 5fr) [right-main-end inner-end]
+      minmax(0rem, 1fr) [full-end];
   }
-
-  @media (min-width: 80rem) {
-    gap: 32px;
-    width: 928px;
-  }
-}
-
-.new-grid {
-  display: grid;
-  grid-template-columns:
-    [full-start] minmax(0rem, 1fr)
-    [inner-start left-main-start] minmax(0, 5fr) [left-main-end]
-    minmax(0rem, 1fr)
-    [right-main-start] minmax(0, 5fr) [right-main-end inner-end]
-    minmax(0rem, 1fr) [full-end];
-  gap: clamp(0.5rem, calc(0.5rem + 1vw), 2rem);
 
   &.no-gap {
     gap: 0;
@@ -48,15 +28,19 @@
     }
   }
 
-  & .left-main {
+  & .layout-left {
     grid-column: left-main;
   }
 
-  & .right-main {
+  & .layout-right {
     grid-column: right-main;
   }
 
-  & .full-width {
+  & .layout-full {
     grid-column: full;
+  }
+
+  & .layout-inner {
+    grid-column: inner;
   }
 }

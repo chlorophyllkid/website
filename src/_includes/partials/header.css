@@ -2,8 +2,10 @@
 header {
   padding-top: 24px;
 
-  display: flex;
-  justify-content: space-between;
+  & .flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .logo {

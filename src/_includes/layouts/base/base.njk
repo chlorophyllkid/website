@@ -21,29 +21,23 @@
     </script>
   </head>
   <body>
-    <header class="new-grid">
-      <a class="left-main logo" href="{{ '/' | url }}">
+    <header class="layout-grid">
+      <div class="layout-inner flex-container">
+        <a class="logo" href="{{ '/' | url }}">
         <span class="icon"></span>
         <span class="title">{{ metadata.title }}</span>
       </a>
 
-      <theme-switch class="right-main"></theme-switch>
+      <theme-switch class=""></theme-switch>
+      </div>
 
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      {# <ul class="nav">
-        {%- for entry in collections.all | eleventyNavigation %}
-          <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
-            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-          </li>
-        {%- endfor %}
-      </ul> #}
     </header>
 
-    <main class="new-grid">
+    <main class="layout-grid">
       {{ content | safe }}
     </main>
 
-    <footer class="new-grid">
+    <footer class="layout-grid">
       <p>© 2023 Christopher Voigt.</p>
     </footer>
   </body>
