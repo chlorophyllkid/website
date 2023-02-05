@@ -11,10 +11,16 @@ export default css`
     border: 0;
     width: 2.5rem;
     height: 2.5rem;
-    padding: 0.25rem;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (min-width: 48rem) {
+    button {
+      padding: 0.25rem;
+    }
   }
 
   button:hover {
