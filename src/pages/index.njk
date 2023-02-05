@@ -6,20 +6,36 @@ title: Christopher Voigt
 
 {% include "partials/banner/banner.njk" %}
 
-<h1>Hi, I'm Chris 👋</h1>
-<p>I am a Senior Frontend Developer from Dresden, Germany and I'm currently working at <a href="https://www.queo.de/">queo</a>.</p>
+<div class="layout-left post">
+  <h1>Hi, I'm Chris 👋</h1>
 
-{% set maxPosts = collections.posts.length | min(3) %}
-<h2>Here are
-  {% if maxPosts == 1 %} example Post
-  {% else %}
-    {{ maxPosts }} example Posts{% endif %}
-</h2>
+  <div class="post-content">
+    <p>I am currently working as a front-end developer at <a href="https://www.queo.de/">queo</a> in Dresden, Germany.</p>
+    <p>
+      This blog aims to reflect the topics that I work on or the tools that I work with.<br />
+      I am also very new to blogging. And as most of the developers I know, I am usually not known for finishing side projects that I start. Sorry in advance, if there hasn't been a recent post in quite some time on this page. I try my best.
+    </p>
+    <p>Besides web development I'm also interested in cooking, plants and all sorts of music. Which means that there might be posts that are more off-topic then the rest.</p>
+    <p>No matter how you got here, thank you for reading my blog. And I hope it helped you a little and you learned something new.</p>
+    <p>Chris</p>
+  </div>
+</div>
 
-<p>I might update those for real posts later. For now they work as a placeholder to style a bunch of stuff.</p>
+<div class="layout-right post">
+  {% set maxPosts = collections.posts.length | min(3) %}
+  <h2>Here are
+    {% if maxPosts == 1 %} example Post
+    {% else %}
+      {{ maxPosts }} example Posts{% endif %}
+  </h2>
 
-{% set postlist = collections.posts | head(-3) %}
-{% set postlistCounter = collections.posts | length %}
-{% include "partials/postlist/postlist.njk" %}
+  <div class="post-content">
+    <p>I might update those for real posts later. For now they work as a placeholder to style a bunch of stuff.</p>
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+    {% set postlist = collections.posts | head(-3) %}
+    {% set postlistCounter = collections.posts | length %}
+    {% include "partials/postlist/postlist.njk" %}
+
+    <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  </div>
+</div>
