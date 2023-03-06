@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
   // Copy the `img` folder to the output
   eleventyConfig.addPassthroughCopy('src/img')
   eleventyConfig.addPassthroughCopy('src/fonts')
+  eleventyConfig.addPassthroughCopy('src/.well-known')
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss)

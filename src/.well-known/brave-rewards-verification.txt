@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: christophervoigt.dev
+Token: 4cbf5e0ef68fe74ac4cf06c7abeca6ff5e0f5a8d967bf75726adb2ef4d1f31d7
